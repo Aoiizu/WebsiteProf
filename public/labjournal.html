@@ -1,0 +1,95 @@
+<html>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --muted:#6b6b6b;
+      --accent:#111827;
+      --card:#f7f7f8;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--accent);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{font-weight:800;letter-spacing:2px}
+    nav ul{display:flex;gap:24px;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .contact-btn{border:2px solid var(--accent);padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:700}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:start;margin-top:20px}
+    .hero-left h1{font-size:44px;line-height:1.02;margin:0 0 16px}
+    .hero-left p{color:var(--muted);margin:0 0 20px}
+    .hero-meta{display:flex;gap:14px;flex-wrap:wrap}
+    .meta-item{background:var(--card);padding:10px 12px;border-radius:8px;font-weight:600}
+
+    .hero-right{background:linear-gradient(180deg,#e9eef6, #f8fafc);border-radius:12px;padding:18px}
+    .project-list{display:flex;flex-direction:column;gap:12px}
+    .project{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:8px;background:white}
+    .project .title{font-weight:700}
+    .project .meta{font-size:12px;color:var(--muted)}
+
+    /* works grid */
+    .section{margin-top:52px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(16,24,40,0.04);}
+    .card img{width:100%;height:170px;object-fit:cover;display:block}
+    .card .card-body{padding:14px}
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+    /* journal */
+    .journal-list{display:flex;flex-direction:column;gap:12px}
+    .journal-item{display:flex;gap:12px;align-items:flex-start}
+    .journal-item .thumb{width:96px;height:64px;background:#eee;border-radius:6px;flex-shrink:0}
+    .journal-item .info{flex:1}
+    .journal-item .info h4{margin:0;font-size:15px}
+    .journal-item .info p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    footer{margin-top:60px;padding:28px 0;border-top:1px solid #eee;color:var(--muted);font-size:14px}
+
+    /* responsiveness */
+    @media (max-width:1000px){.hero{grid-template-columns:1fr 320px}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:720px){.hero{grid-template-columns:1fr}.hero-right{order:2}.grid{grid-template-columns:1fr}.container{padding:20px}}
+
+    /* small interactions */
+    a:hover{opacity:0.9}
+    .card:hover{transform:translateY(-6px);transition:all .28s ease}
+  </style>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+  <div class="container">
+    <header>
+      <div class="brand" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Laboratorium Homepage</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page1.html"> Works & Projects</a></li>
+          <li class="nav-item dropdown">
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Journal & Schedule
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="labactivity.html">Laboratorium Activity</a></li>
+                <li><a class="dropdown-item" href="labsched.html">Laboratorium Schedule</a></li>
+                <li><a class="dropdown-item" href="labjournal.html">Laboratorium Journal</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left" style="font-family: 'Courier New', Courier, monospace;font-weight:bold;">
+          <h1>IVSS Laboratorium</h1>
+          <p>Laboratorium IVSS </p>
